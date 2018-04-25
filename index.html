@@ -37,6 +37,23 @@
         <div class="col-md-6"> 
             <div class="thumbnail">
 				<img class="poster" ng-click="poster(0)" ng-src="{{ movies[0].posters[movies[0].posterindex] }}" />
+					<div class="imageInfo">Current Poster: {{ movies[0].posterindex }} Total Posters: {{ movies[0].posters.length }}</div>
+					
+					<p class="title">{{ movies[0].title }} ({{ movies[0].country }})</p> 
+					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movies[0].iscore }} </p>
+					<p class="runtime">Runtime: {{ movies[0].runtime }}</p> 
+					<p class="released">Released: {{ movies[0].released | date }} | Rated: {{ movies[0].rating }}</p>
+					<p class="websites">Websites: <a> {{ movies[0].imdb }}</a> | <a> {{ movies[0].website }}</a></p>
+					
+		            <div class="social">
+		              <p class="likes" ng-click="like(0)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[0].likes }}</p>
+		              <p class="dislikes" ng-click="dislike(0)"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[0].dislikes }}</p>
+		            </div>
+            </div>
+        </div>
+		<div class="col-md-6"> 
+            <div class="thumbnail">
+				<img class="poster" ng-click="poster(0)" ng-src="{{ movies[0].posters[movies[0].posterindex] }}" />
 					<div class="imageInfo"> {{ movies[0].posterindex }}</div>
 					
 					<p class="title">{{ movies[0].title }} ({{ movies[0].country }})</p> 
@@ -49,7 +66,7 @@
 		              <p class="likes" ng-click="like(0)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[0].likes }}</p>
 		              <p class="dislikes" ng-click="dislike(0)"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[0].dislikes }}</p>
 		            </div>
-            </div> 
+            </div>
         </div>
 
       </div>
