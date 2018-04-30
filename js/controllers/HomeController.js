@@ -100,7 +100,7 @@ app.controller('HomeController', ['$scope', function($scope) {
 	
 	$scope.title = "IMDB + John's Top 8 Movies";
 	$scope.owner = "John McMinn";
-	$scope.github = " http://www.github.com/skyriser/is219s18mcminn-p3";
+	$scope.github = " http://www.github.com/skyriser92/is219s18mcminn-p3";
 	
 	
 	

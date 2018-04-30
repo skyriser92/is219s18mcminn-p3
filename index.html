@@ -37,13 +37,13 @@
         <div class="col-md-6" ng-repeat="movie in movies"> 
             <div class="thumbnail">
 				<img class="poster" ng-click="poster($index)" ng-src="{{ movies[$index].posters[movies[$index].posterindex] }}" />
-					<div class="imageInfo">Current Poster: {{ movies[$index].posterindex }} Total Posters: {{ movies[$index].posters.length }}</div>
+					<div class="imageInfo">Current Poster: {{ movies[$index].posterindex+1 }} Total Posters: {{ movies[$index].posters.length }}</div>
 					
 					<p class="title">{{ movies[$index].title }} ({{ movies[$index].country }})</p> 
 					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movies[$index].iscore }} </p>
 					<p class="runtime">Runtime: {{ textTime(movies[$index].runtime) }}</p> 
 					<p class="released">Released: {{ movies[$index].released | date }} | Rated: {{ movies[$index].rating }}</p>
-					<p class="websites">Websites: <a> {{ movies[$index].imdb }}</a> | <a> {{ movies[$index].website }}</a></p>
+					<p class="websites">Websites: <a href="{{ movies[$index].imdb }}">IMDB</a> | <a href="{{ movies[$index].website }}">Official</a></p>
 					
 		            <div class="social">
 		              <p class="likes" ng-click="like($index)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[$index].likes }}</p>
@@ -51,30 +51,12 @@
 		            </div>
             </div>
         </div>
-		<!-- <div class="col-md-6"> 
-            <div class="thumbnail">
-				<img class="poster" ng-click="poster(1)" ng-src="{{ movies[1].posters[movies[1].posterindex] }}" />
-					<div class="imageInfo"> {{ movies[1].posterindex }}</div>
-					
-					<p class="title">{{ movies[1].title }} ({{ movies[1].country }})</p> 
-					<p class="score"><i class="fa fa-star" aria-hidden="true"></i> {{ movies[1].iscore }} </p>
-					<p class="runtime">Runtime: {{ movies[1].runtime }}</p> 
-					<p class="released">Released: {{ movies[1].released | date }} | Rated: {{ movies[1].rating }}</p>
-					<p class="websites">Websites: <a> {{ movies[1].imdb }}</a> | <a> {{ movies[1].website }}</a></p>
-					
-		            <div class="social">
-		              <p class="likes" ng-click="like(1)"><i class="fa fa-thumbs-up" aria-hidden="true"></i> {{ movies[1].likes }}</p>
-		              <p class="dislikes" ng-click="dislike(1)"><i class="fa fa-thumbs-down" aria-hidden="true"></i> {{ movies[1].dislikes }}</p>
-		            </div>
-            </div>
-        </div> -->
-
       </div>
     </div>
 
     <div class="footer">
       <div class="container">
-		<a id="github" class="btn btn-lg btn-warning">
+		<a id="github" class="btn btn-lg btn-warning" href="{{ github }}">
 			<i class="fa fa-lg fa-github pull-left" aria-hidden="true"></i> {{ owner }} {{ github }}
   		</a>
       </div>
