@@ -88,6 +88,48 @@ app.controller('HomeController', ['$scope', function($scope) {
       likes:	812,
       dislikes:	101,
       posterindex: 0
+	},
+	{ 
+      title:	'Harry potter', 
+      iscore:	7.6,
+      rating:	'PG',
+      runtime:	152,
+      released:	new Date('2001', '11', '16'),
+      country:	'USA',
+      posters:	['img/harry_potter1.jpg', 'img/harry_potter2.jpg'],
+      imdb:		'http://www.imdb.com/title/tt0241527/?ref_=nv_sr_1',
+      website:	'http://hpwishlist.warnerbros.com/movies/movie-1-harry-potter-and-the-sorcerers-stone/',
+      likes:	1012,
+      dislikes:	131,
+      posterindex: 0
+	},
+	{ 
+      title:	'Lord of the Rings', 
+      iscore:	8.8,
+      rating:	'PG-13',
+      runtime:	178,
+      released:	new Date('2001', '12', '19'),
+      country:	'USA',
+      posters:	['img/lor1.jpg', 'img/lor2.jpg'],
+      imdb:		'https://www.imdb.com/title/tt0120737/?ref_=nv_sr_1',
+      website:	'http://lordoftherings.net',
+      likes:	3022,
+      dislikes:	169,
+      posterindex: 0
+	},
+	{ 
+      title:	'Avengers', 
+      iscore:	8.1,
+      rating:	'PG-13',
+      runtime:	143,
+      released:	new Date('2012', '5', '4'),
+      country:	'USA',
+      posters:	['img/avengers1.jpg', 'img/avengers2.jpg'],
+      imdb:		'https://www.imdb.com/title/tt0848228/?ref_=nv_sr_7',
+      website:	'http://marvel.com/avengers',
+      likes:	2472,
+      dislikes:	136,
+      posterindex: 0
 	}
 	
 	
